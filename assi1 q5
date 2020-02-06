@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+struct student
+{
+    private:
+	char name[50];
+	int roll;
+	int marks;
+	public:
+    void getdata();
+    void setdata();
+}stu[10];
+
+void student::setdata()
+	{
+		for(int i=0;i<3;i++)
+		{
+			cout<<"Enter the details of Student "<<i+1<<endl;
+			cout<<"\nName : ";
+			cin>>stu[i].name;
+			cout<<"\nRoll no. : ";
+			cin>>stu[i].roll;
+			cout<<"\nMarks : ";
+			cin>>stu[i].marks;
+		}
+	}
+void student::getdata() 
+	{
+		for(int i=0;i<3;i++)
+		{
+			cout<<"Details of Student "<<i+1<<endl;
+			cout<<"\nName : "<<stu[i].name;
+			cout<<"\nRoll no. : "<<stu[i].roll;
+			cout<<"\nMarks : "<<stu[i].marks;
+		}
+	}
+int main()
+{
+	student s1;
+	s1.setdata();
+	s1.getdata();
+	return 0;
+}
