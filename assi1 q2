@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"my name is akshat\n";
+	cout<<"i am in k5."<<endl;
+	cout<<"i am fine\t"<<"how you doing?\a\n";
+	cout<<"this should not print \r this should print";
+	return 0;
+}
