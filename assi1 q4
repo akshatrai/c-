@@ -1,36 +1,41 @@
-#include <iostream>
-
-
+#include<iostream>
 using namespace std;
-
 struct student
 {
-  int roll_no;
-  char name[20];
-  int marks;
-};
+	char name[50];
+	int roll;
+	int marks;
+    void getdata();
+    void setdata();
+}stu[10];
 
+void student::setdata()
+	{
+		for(int i=0;i<3;i++)
+		{
+			cout<<"Enter the details of Student "<<i+1<<endl;
+			cout<<"\nName : ";
+			cin>>stu[i].name;
+			cout<<"\nRoll no. : ";
+			cin>>stu[i].roll;
+			cout<<"\nMarks : ";
+			cin>>stu[i].marks;
+		}
+	}
+void student::getdata() 
+	{
+		for(int i=0;i<3;i++)
+		{
+			cout<<"Details of Student "<<i+1<<endl;
+			cout<<"\nName : "<<stu[i].name;
+			cout<<"\nRoll no. : "<<stu[i].roll;
+			cout<<"\nMarks : "<<stu[i].marks;
+		}
+	}
 int main()
 {
-
-	struct student stud[3];
-  	int i;
-
-	for(i=0; i<3; i++){                   		
-		cout << "Student " << i + 1 << endl;
-		cout << "Enter roll no" << endl;
-		cin >> stud[i].roll_no;
-		cout << "Enter name" << endl;
-		cin >> stud[i].name;
-		cout << "marks" << endl;
-		cin >> stud[i].marks;
-	}
-
-	for(i=0; i<3; i++){							
-		cout << "Student " << i + 1 << endl;
-		cout << "Roll no : " << stud[i].roll_no << endl;
-		cout << "Name : " << stud[i].name << endl;
-		cout << "marks : " << stud[i].marks << endl;
-	}
+	student s1;
+	s1.setdata();
+	s1.getdata();
 	return 0;
 }
