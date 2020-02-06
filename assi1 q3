@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+
+namespace global
+{
+	int gdp=5;
+}
+ int gdp=10;
+ int main()
+ {
+ 	int gdp=1;
+ 	cout<<"india's gdp is growing at "<< global::gdp;
+ 	return 0;
+ }
